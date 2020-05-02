@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Project Cashku </title>
+<style>
+	
+	html{
+		box-sizing: border-box;
+		font-size: 15px;
+	}
+
+	*,*:before , *:after{
+		box-sizing: inherit;
+	}
+
+	body,h1,h2,h3{
+
+		margin: 0;
+		padding: 0;
+		font-weight: normal;
+	}
+	a{
+		text-decoration: none;
+	}
+	body{
+		background-color:  #FAB005;
+		padding: 4rem;
+		font-family: tahoma;
+	}
+	.main{
+		width: 100%;
+		background-color: #15AABF;
+		box-shadow: 0 0 20px #143447;
+
+	}
+	.top{
+		background-color:#15AABF; 
+	}
+	.header{
+		display: flex;
+		justify-content: space-between;
+	}
+	.logo{
+		padding-left: 20px; 
+	}
+	.login{
+		padding-right: 40px;
+		padding-top: 20px;
+	}
+	.login input{
+		width: 150px;
+		height: 30px;
+		padding: 5px;
+		border: none;
+		float: left;
+		outline: none;
+	}
+	.login button{
+		outline: none;
+		float: left;
+		background-color: #FAB005;
+		border: 1px solid #29487d;
+		color: white;
+		height: 30px;
+		width: 100px;
+		cursor: pointer;
+	}
+	h2{
+		color: white;
+		text-align: center;
+		font-size: 2rem;
+		padding: 70px 0 25px;
+	}
+
+	h3{
+		color: white;
+		text-align: center;
+		font-size: 1rem;
+		padding-bottom: 140px;
+
+	}
+	.signup{
+		width: 400px;
+		margin: auto;
+		background-color: white;
+		position: relative;
+		top: -71px;
+		padding: 30px;
+	}
+	.signup h4{
+		color: gray;
+		font-size: 1.4rem;	
+
+	}
+	.signup .field{
+		margin: 30px;
+		position: relative;
+	}
+
+	.signup input{
+		display: block;
+		width: 100%;
+		border: none;
+		outline: none;
+		border-bottom: 1px solid #999;
+		color: gray;
+		font-size: 1rem;
+	}
+	.signup button{
+		display: block;
+		width: 100%;
+		outline: none;
+		background-color: #FAB005;
+		border: 1px solid #29487d;
+		color: white;
+		font-size: 1rem;
+		cursor: pointer;
+		padding: 10px;
+
+	}
+	.signup .label{
+
+		position: absolute;
+		pointer-events: none;
+		left: 0;
+		top: 0;
+		transition: 0.2s ease all;
+		color: #757575 ;
+	}
+	.signup input:focus ~ .label,
+	.signup input:not(:focus):valid ~ .label{
+		top: -17px;
+		font-size: .8rem;
+		opacity: 1;
+	}
+
+</style>
+
+</head>
+<body>
+
+<div class="main">
+	<div class="top">
+		<div class="header">
+			<h1 class="logo"><a href=""><img src=".jpg" alt=""></a></h1>
+				<div class="login">
+					<form>
+						<input type="username" placeholder="Username" required>
+						<input type="password" placeholder="Password" required>
+						<button type="submit">Login</button>
+					</form>
+				</div>
+		</div>
+
+		<h2>Welcome to Cashku</h2>
+		<h3>Where you manage money</h3>
+	</div>
+	<div class="signup">
+		<h4>SIGN UP</h4>
+		<form>
+			<div class="field">
+				<input type="text" required="">
+				<span class="label">Full Name</span>
+			</div>
+
+			<div class="field">
+				<input type="Username" required="">
+				<span class="label">Username</span>
+			</div>
+
+			<div class="field">
+				<input type="password" required="">
+				<span class="label">Your Password</span>
+			</div>
+
+			<div class="field">
+				<button class="button">Sign Up</button>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>
