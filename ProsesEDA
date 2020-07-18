@@ -1,0 +1,40 @@
+*** HASIL PROSES EDA MENGGUNAKAN DATA SARS ***
+
+1. Untuk Proses Pertama
+sars_df = spark.read.csv('C:/BigData/Sars.csv', header=True, inferSchema=True)
+sars_df.show(5)
++----------+--------------------+----------------------------+----------------+----------------+
+|      Date|             Country|Cumulative number of case(s)|Number of deaths|Number recovered|
++----------+--------------------+----------------------------+----------------+----------------+
+|2003-03-17|             Germany|                           1|               0|               0|
+|2003-03-17|              Canada|                           8|               2|               0|
+|2003-03-17|           Singapore|                          20|               0|               0|
+|2003-03-17|Hong Kong SAR, China|                          95|               1|               0|
+|2003-03-17|         Switzerland|                           2|               0|               0|
++----------+--------------------+----------------------------+----------------+----------------+
+only showing top 5 rows
+
+2. Untuk Proses Kedua
+sars_df.printSchema()
+root
+ |-- Date: string (nullable = true)
+ |-- Country: string (nullable = true)
+ |-- Cumulative number of case(s): integer (nullable = true)
+ |-- Number of deaths: integer (nullable = true)
+ |-- Number recovered: integer (nullable = true)
+ 
+ 3. Untuk Proses Ketiga
+ sars_df.count()
+print("Jumlah Data Orangnya") = 2538
+
+4. Proses Keempat
+sars_df.select('Country').describe().show()
++-------+---------+
+|summary|  Country|
++-------+---------+
+|  count|     2538|
+|   mean|     null|
+| stddev|     null|
+|    min|Australia|
+|    max| Viet Nam|
++-------+---------+
